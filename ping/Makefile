@@ -5,7 +5,7 @@ RESET = \033[0m
 
 CC = clang
 CFLAGS = -Wall -Wextra -Werror -std=c11
-INC = -I./includes 
+INC = -I./includes
 
 NAME = ping
 
@@ -40,5 +40,11 @@ clean:
 	@echo -e "$(RED)Cleaning object files...$(RESET)"
 	@rm -rf $(OBJ_DIR)
 	@echo -e "$(RED)✓ Object files cleaned!$(RESET)"
+
+fclean: clean
+	@rm -r $(NAME)
+	@printf "$(RED)Binary file deleted$(RESET)"
+
+re: clean all
 
 .PHONY: all clean fclean re 
