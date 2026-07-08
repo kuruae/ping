@@ -47,4 +47,7 @@ fclean: clean
 
 re: clean all
 
-.PHONY: all clean fclean re 
+test: $(NAME)
+	@./tests/test_parsing.sh
+
+.PHONY: all clean fclean re test 

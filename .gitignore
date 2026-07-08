@@ -1,0 +1,4 @@
+.o
+/obj
+compile_commands.json
+ping
